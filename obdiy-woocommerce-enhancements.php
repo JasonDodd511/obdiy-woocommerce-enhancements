@@ -4,7 +4,7 @@
 Plugin Name: OBDIY WooCommerce Enhancements
 Plugin URI: https://github.com/JasonDodd511/obdiy-woocommerce-enhancements
 Description: Plugin to house WooCommerce snippets.
-Version: 1.0
+Version: 1.1.0
 Author: Jason Dodd
 Author URI: https://cambent.com
 License: GPL2
