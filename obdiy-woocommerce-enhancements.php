@@ -4,7 +4,7 @@
 Plugin Name: OBDIY WooCommerce Enhancements
 Plugin URI: https://github.com/JasonDodd511/obdiy-woocommerce-enhancements
 Description: Plugin to house WooCommerce snippets.
-Version: 1.1.0
+Version: 1.1.1
 Author: Jason Dodd
 Author URI: https://cambent.com
 License: GPL2
@@ -139,8 +139,7 @@ woocommerce_form_field( 'privacy_policy', array(
     'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
     'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
     'required'      => true,
-    'label'         => 'Your personal data will help us create your account and support your user experience on the 
-    			PM Perspective website.  Please readn adnad accept our <a href="/privacy-policy">Privacy Policy</a> document
+    'label'         => 'Please read and accept our <a href="/privacy-policy">Privacy Policy</a> document,
 			where you can find more information on how we use your personal data.',
 )); 
   
