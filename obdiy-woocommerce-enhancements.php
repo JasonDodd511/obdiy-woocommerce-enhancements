@@ -4,7 +4,7 @@
 Plugin Name: OBDIY WooCommerce Enhancements
 Plugin URI: https://github.com/JasonDodd511/obdiy-woocommerce-enhancements
 Description: Plugin to house WooCommerce snippets.
-Version: 1.1.4
+Version: 1.1.5
 Author: Jason Dodd
 Author URI: https://cambent.com
 License: GPL2
@@ -149,7 +149,7 @@ woocommerce_form_field( 'privacy_policy', array(
    
 add_action( 'woocommerce_checkout_process', 'obdiy_not_approved_privacy' );
   
-function bodiy_not_approved_privacy() {
+function obdiy_not_approved_privacy() {
     if ( ! (int) isset( $_POST['privacy_policy'] ) ) {
         wc_add_notice( __( 'Please acknowledge the Privacy Policy' ), 'error' );
     }
