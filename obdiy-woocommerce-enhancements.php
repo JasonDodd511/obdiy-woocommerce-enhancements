@@ -124,3 +124,34 @@ function enable_guest_checkout_based_on_product( $value ) {
 
 	return $value;
 }
+/**
+ * GDPR Compliance - add a privacy policy checkbox to the checkout form
+ *  
+ */
+ 
+add_action( 'woocommerce_review_order_before_submit', 'obdiy_add_checkout_privacy_policy', 9 );
+   
+function obdiy_add_checkout_privacy_policy() {
+  
+woocommerce_form_field( 'privacy_policy', array(
+    'type'          => 'checkbox',
+    'class'         => array('form-row privacy'),
+    'label_class'   => array('woocommerce-form__label woocommerce-form__label-for-checkbox checkbox'),
+    'input_class'   => array('woocommerce-form__input woocommerce-form__input-checkbox input-checkbox'),
+    'required'      => true,
+    'label'         => 'Your personal data will help us create your account and support your user experience on the 
+    			PM Perspective website.  Please readn adnad accept our <a href="/privacy-policy">Privacy Policy</a> document
+			where you can find more information on how we use your personal data.',
+)); 
+  
+}
+  
+// Show notice if customer does not check the box
+   
+add_action( 'woocommerce_checkout_process', 'obdiy_not_approved_privacy' );
+  
+function bodiy_not_approved_privacy() {
+    if ( ! (int) isset( $_POST['privacy_policy'] ) ) {
+        wc_add_notice( __( 'Please acknowledge the Privacy Policy' ), 'error' );
+    }
+}
