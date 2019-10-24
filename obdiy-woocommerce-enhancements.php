@@ -32,7 +32,7 @@ function loginLogoutLink(){
 	return $link;
 }
 
-add_shortcode( 'login-logout-link' , loginLogoutLink );
+add_shortcode( 'login-logout-link' , 'loginLogoutLink' );
 
 /**
  * 'My Account' Admin Link
@@ -57,7 +57,7 @@ function myAccountLink(){
 	return $link;
 }
 
-add_shortcode( 'my-account-link' , myAccountLink );
+add_shortcode( 'my-account-link' , 'myAccountLink' );
 
 /**
  * Auto Complete all WooCommerce orders.
